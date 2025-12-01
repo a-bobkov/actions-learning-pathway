@@ -12,6 +12,7 @@ jobs:
           node-version: '18.x'
       - run: npm install
       - run: npm run build
+      - run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
   deploy:
     needs: build
     permissions:
