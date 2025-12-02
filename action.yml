@@ -1,0 +1,17 @@
+name: Test custom action
+description: Greet someone and record the time
+author: GitHub Actions
+
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    default: World
+
+outputs:
+  time:
+    description: The time we greeted you
+
+runs:
+  using: node24
+  main: dist/index.js
